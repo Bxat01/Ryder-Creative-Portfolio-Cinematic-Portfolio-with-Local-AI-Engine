@@ -11,7 +11,7 @@ A production-ready, cinematic portfolio with a built-in **local AI engine** that
 ---
 
 ## 📸 Live Preview
-> **Live Demo:** [https://ryder-portfolio.vercel.app](https://ryder-portfolio.vercel.app) *(example)*  
+> **Live Demo:** [https://ryder-portfolio.vercel.app]([https://ryder-portfolio.vercel.app](https://ryder-e9ce.onrender.com/)) *(example)*  
 > **Admin Access:** Press `Ctrl + Alt + A` → Password: `RyderAdmin2024!`
 
 ---
