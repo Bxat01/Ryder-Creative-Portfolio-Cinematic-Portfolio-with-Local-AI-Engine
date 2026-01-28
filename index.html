@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryder | Creative Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="icon" type="image/png" href="https://github.com/Bxat01.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #020617;
+      color: #f8fafc;
+      overflow: hidden;
+      margin: 0;
+    }
+    h1, h2, h3, .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .outline-text {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+      color: transparent;
+    }
+    .custom-cursor-active {
+      cursor: none;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.2);
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(59, 130, 246, 0.5);
+    }
+
+    /* CSS Preloader Styles */
+    #preloader-fallback {
+      position: fixed;
+      inset: 0;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+    .fallback-name {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.2em;
+      margin-left: 1.2em;
+      opacity: 0.8;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; letter-spacing: 1.1em; }
+      50% { opacity: 0.9; letter-spacing: 1.3em; }
+    }
+
+    @media (max-width: 768px) {
+      .custom-cursor-active {
+        cursor: auto;
+      }
+      body {
+        overflow: auto;
+      }
+    }
+iframe {
+  display: block !important;
+  background: #000 !important;
+  border: none !important;
+}
+
+.fake-admin-iframe {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.video-container {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.fake-admin-overlay {
+  z-index: 3000 !important;
+  position: fixed !important;
+}
+
+.custom-cursor-active {
+  cursor: none !important;
+}
+
+body.fake-admin-open {
+  overflow: hidden !important;
+}
+
+iframe {
+  pointer-events: none !important;
+}
+@keyframes fall {
+  0% { 
+    transform: translateY(-100px) translateX(0); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateY(100vh) translateX(20px); 
+    opacity: 0; 
+  }
+}
+
+iframe {
+  background: black !important;
+  display: block !important;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fixed {
+  isolation: isolate;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.29.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="custom-cursor-active">
+  <div id="root">
+    <div id="preloader-fallback">
+      <div class="fallback-name">Ryder</div>
+    </div>
+  </div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

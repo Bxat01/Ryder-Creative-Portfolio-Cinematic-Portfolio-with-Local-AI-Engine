@@ -1,0 +1,9 @@
+
+{
+  "name": "Ryder Creative Portfolio",
+  "description": "Secure, cinematic multi-disciplinary portfolio with MongoDB and Cloudinary integration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

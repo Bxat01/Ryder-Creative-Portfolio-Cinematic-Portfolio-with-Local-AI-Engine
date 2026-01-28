@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin
+
+# fuck you i am not stupid
