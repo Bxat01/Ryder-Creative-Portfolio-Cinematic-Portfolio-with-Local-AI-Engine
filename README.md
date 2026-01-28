@@ -1,73 +1,83 @@
-# Ryder-Creative-Portfolio-Cinematic-Portfolio-with-Local-AI-Engine
-🎬 A cinematic, multi-disciplinary portfolio website built with React &amp; TypeScript.  Features a custom local AI engine (RIE) that intelligently ranks projects without external APIs. Includes video editing, 3D art, web development, and game dev projects with multi-language support (EN/AR/FR).
-🚀 Ryder Creative Portfolio
-Cinematic • Intelligent • Multi-disciplinary
+# 🚀 Ryder Creative Portfolio  V0.1
+**Cinematic • Intelligent • Multi-disciplinary**
 
-https://img.shields.io/badge/React-19.2-blue?style=flat&logo=react
-https://img.shields.io/badge/TypeScript-5.8-blue?style=flat&logo=typescript
-https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat&logo=tailwind-css
-https://img.shields.io/badge/Vite-6.4-646CFF?style=flat&logo=vite
+[![React](https://img.shields.io/badge/React-19.2-blue?style=flat&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-6.4-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
 
-A production-ready, cinematic portfolio with a built-in local AI engine that intelligently ranks and organizes creative work—no external APIs, no tracking, fully private.
+A production-ready, cinematic portfolio with a built-in **local AI engine** that intelligently ranks and organizes creative work—**no external APIs, no tracking, fully private.**
 
-📸 Live Preview
-Live Demo: https://ryder-portfolio.vercel.app (example)
-Admin Access: Press Ctrl + Alt + A → Password: RyderAdmin2024!
+---
 
-✨ Key Features
-🎬 Cinematic Experience
-Smooth, movie-like transitions between sections
+## 📸 Live Preview
+> **Live Demo:** [https://ryder-portfolio.vercel.app](https://ryder-portfolio.vercel.app) *(example)*  
+> **Admin Access:** Press `Ctrl + Alt + A` → Password: `RyderAdmin2024!`
 
-Custom 3D particle backgrounds
+---
 
-Dynamic lighting & gradient effects
+## ✨ Key Features
 
-Professional video player integration
+### 🎬 **Cinematic Experience**
+- Smooth, movie-like transitions between sections
+- Custom 3D particle backgrounds
+- Dynamic lighting & gradient effects
+- Professional video player integration
 
-🧠 Built-in Intelligence Engine (RIE)
-Local-only AI – No data leaves your browser
+### 🧠 **Built-in Intelligence Engine (RIE)**
+- **Local-only AI** – No data leaves your browser
+- **Auto-ranks projects** based on:
+  - Admin priority score
+  - Real-time view counts
+  - Content recency
+- **Self-learning** – improves sorting as visitors interact
 
-Auto-ranks projects based on:
+### 🌍 **Multi-language Ready**
+- English (EN), Arabic (AR), French (FR)
+- RTL support for Arabic
+- Dynamic translation switching
 
-Admin priority score
+### 🛡️ **Security & Fun**
+- **Real Admin Panel** – For content management
+- **Fake Admin Trap** – Enter wrong password → Get Rick Rolled! 😄
+- **No cookies, no tracking** – Privacy by design
 
-Real-time view counts
+### 📱 **Fully Responsive**
+- Mobile-first design
+- Touch-friendly navigation
+- Optimized performance
+## 📸 Screenshots
 
-Content recency
+<div align="center">
 
-Self-learning – improves sorting as visitors interact
+### 🏠 Landing Page
+![Home Page](https://res.cloudinary.com/ddqedxovk/image/upload/v1769572963/h8o6anxmlykug7ouwntd.png)
 
-🌍 Multi-language Ready
-English (EN), Arabic (AR), French (FR)
+### 🎨 Projects Gallery
+![Projects Page](https://res.cloudinary.com/ddqedxovk/image/upload/v1769572963/kgz1cpzwzaotq8w9rcsc.png)
 
-RTL support for Arabic
+### 👤 About & Contact
+![About Page](https://res.cloudinary.com/ddqedxovk/image/upload/v1769572963/pagaluusp7rjybbm1plo.png)
 
-Dynamic translation switching
+</div>
+---
 
-🛡️ Security & Fun
-Real Admin Panel – For content management
+## 🏗️ Tech Stack
 
-Fake Admin Trap – Enter wrong password → Get Rick Rolled! 😄
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | React 19, TypeScript |
+| **Styling** | Tailwind CSS, Framer Motion |
+| **Build Tool** | Vite 6 |
+| **Animations** | Framer Motion 12 |
+| **Icons** | Lucide React |
+| **Deployment** | Vercel / Netlify / Static Hosting |
 
-No cookies, no tracking – Privacy by design
+---
 
-📱 Fully Responsive
-Mobile-first design
+## 📁 Project Structure
 
-Touch-friendly navigation
-
-Optimized performance
-
-🏗️ Tech Stack
-Layer	Technology
-Frontend	React 19, TypeScript
-Styling	Tailwind CSS, Framer Motion
-Build Tool	Vite 6
-Animations	Framer Motion 12
-Icons	Lucide React
-Deployment	Vercel / Netlify / Static Hosting
-📁 Project Structure
-bash
+```bash
 ryder-creative-portfolio/
 ├── src/
 │   ├── components/          # All React components
@@ -89,9 +99,9 @@ ryder-creative-portfolio/
 ├── vite.config.ts         # Build configuration
 ├── package.json           # Dependencies
 └── README.md              # This file
+
 🚀 Quick Start
 1. Clone & Install
-bash
 # Clone the repository
 git clone https://github.com/Bxat01/ryder-creative-portfolio.git
 cd ryder-creative-portfolio
@@ -309,4 +319,4 @@ Email: abdkadrxt100@gmail.com
 "Engineering aesthetics through code and creativity."
 – Built with React, TypeScript, and cinematic vision.
 
-<div align="center"> <sub>If you find this project useful, please give it a ⭐ on GitHub!</sub> </div>
+<div align="center"> <sub>If you find this project useful, please give it a ⭐ on GitHub!</sub> </div> ```
