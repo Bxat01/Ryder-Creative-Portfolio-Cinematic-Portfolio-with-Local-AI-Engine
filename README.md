@@ -99,7 +99,7 @@ ryder-creative-portfolio/
 ├── vite.config.ts         # Build configuration
 ├── package.json           # Dependencies
 └── README.md              # This file
-
+```
 🚀 Quick Start
 1. Clone & Install
 # Clone the repository
