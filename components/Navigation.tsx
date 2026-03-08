@@ -1,41 +1,45 @@
-
 import React from 'react';
-import { motion } from 'framer-motion';
 
-interface NavigationProps {
-  t: any;
-  currentSection: number;
-  onNavigate: (index: number) => void;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ t, currentSection, onNavigate }) => {
-  const navItems = [
-    { name: t.intro, index: 0 },
-    { name: t.work, index: 1 },
-    { name: t.about, index: 2 }
-  ];
+const Navigation: React.FC = () => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-[100]">
-      <div className="flex items-center gap-1 p-1 bg-slate-900/40 backdrop-blur-xl border border-white/5 rounded-full shadow-2xl">
-        {navItems.map((item) => (
-          <button
-            key={item.index}
-            onClick={() => onNavigate(item.index)}
-            className="relative px-6 py-2 rounded-full text-[10px] font-bold tracking-[0.2em] transition-all"
-          >
-            <span className={`relative z-10 ${currentSection === item.index ? 'text-white' : 'text-slate-500'}`}>
-              {item.name}
-            </span>
-            {currentSection === item.index && (
-              <motion.div
-                layoutId="nav-pill"
-                className="absolute inset-0 bg-blue-600 rounded-full"
-                transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-              />
-            )}
-          </button>
-        ))}
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+      <div className="flex gap-1 bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-full px-2 py-1.5">
+        <a
+          href="#hero"
+          onClick={(e) => scrollToSection(e, 'hero')}
+          className="px-5 py-2 text-xs font-medium text-slate-300 hover:text-white transition rounded-full hover:bg-slate-800"
+        >
+          Home
+        </a>
+        <a
+          href="#music"
+          onClick={(e) => scrollToSection(e, 'music')}
+          className="px-5 py-2 text-xs font-medium text-slate-300 hover:text-white transition rounded-full hover:bg-slate-800"
+        >
+          Music
+        </a>
+        <a
+          href="#projects"
+          onClick={(e) => scrollToSection(e, 'projects')}
+          className="px-5 py-2 text-xs font-medium text-slate-300 hover:text-white transition rounded-full hover:bg-slate-800"
+        >
+          Projects
+        </a>
+        <a
+          href="#about"
+          onClick={(e) => scrollToSection(e, 'about')}
+          className="px-5 py-2 text-xs font-medium text-slate-300 hover:text-white transition rounded-full hover:bg-slate-800"
+        >
+          About
+        </a>
       </div>
     </nav>
   );

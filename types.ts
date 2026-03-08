@@ -1,12 +1,9 @@
-
 export enum ProjectCategory {
   VIDEO_CGI = 'Video & CGI',
   WEB_APP = 'Web & App',
   GAME_DEV = 'Game Dev',
   VIDEO_EDIT = "Edits"
 }
-
-export type Language = 'en' | 'ar' | 'fr';
 
 export interface ProjectAnalytics {
   views: number;
@@ -15,26 +12,25 @@ export interface ProjectAnalytics {
 }
 
 export interface Project {
-  _id?: string;
   id: string;
-  title: Record<Language, string>;
-  description: Record<Language, string>;
+  title: string;
+  description: string;
   category: ProjectCategory;
   thumbnail: string;
-  videoUrl?: string; 
-  liveLink?: string;
+  videoUrl?: string;
+  githubUrl?: string;
   tech: string[];
   isVisible: boolean;
   order: number;
-  adminScore: number; 
+  adminScore: number;
   stats: ProjectAnalytics;
-  rieScore?: number; 
+  rieScore?: number;
 }
 
 export interface SiteConfig {
-  heroTitle: Record<Language, string>;
-  heroSubtitle: Record<Language, string>;
-  bio: Record<Language, string>;
+  heroTitle: string;
+  heroSubtitle: string;
+  bio: string;
   location: string;
   sections: {
     intro: boolean;
@@ -52,7 +48,25 @@ export interface SiteConfig {
   };
 }
 
-export interface GlobalAnalytics {
-  totalVisitors: number;
-  sectionViews: Record<string, number>;
+export interface Track {
+  id: string;
+  title: string;
+  duration?: string | null;
+  spotifyUrl: string | null;
+  isPublished: boolean;
+}
+
+export interface Album {
+  id: string;
+  title: string;
+  coverImage: string;
+  spotifyUrl: string | null;
+  isPublished: boolean;
+  tracks: Track[];
+}
+
+export interface SocialLink {
+  platform: string;
+  url: string;
+  icon: string;
 }

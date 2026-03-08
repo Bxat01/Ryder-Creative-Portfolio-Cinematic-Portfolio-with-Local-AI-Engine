@@ -1,87 +1,96 @@
-
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDown, Sparkles } from 'lucide-react';
 
 interface HeroProps {
+  name: string;
   title: string;
-  subtitle: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle }) => {
-  const titleParts = title.split(' ');
-  const part1 = titleParts[0] || 'STORY';
-  const part2 = titleParts.slice(1).join(' ') || 'TELLING';
-
+const Hero: React.FC<HeroProps> = ({ name, title }) => {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center text-center px-4 relative">
-      <motion.div
-        initial={{ opacity: 0, scale: 1.1 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-        className="z-10 relative"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 border border-white/10 text-blue-400 text-[10px] font-bold tracking-[0.4em] mb-12 uppercase"
-        >
-          <Sparkles size={14} className="animate-pulse" />
-          <span>{subtitle}</span>
-        </motion.div>
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 bg-slate-950 overflow-hidden">
+      
+      <div className="absolute inset-0 z-0 opacity-30">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
         
-        <h1 className="text-6xl md:text-[11rem] font-black tracking-tighter leading-[0.85] mb-12 select-none">
-          <motion.span
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7, duration: 1.2 }}
-            className="block"
-          >
-            {part1}
-          </motion.span>
-          <motion.span
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.9, duration: 1.2 }}
-            className="block outline-text"
-          >
-            {part2}
-          </motion.span>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-ping"></div>
+        
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl animate-pulse"></div>
+        
+        {[...Array(30)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-blue-400/50 rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animation: `float ${5 + Math.random() * 10}s linear infinite`,
+              animationDelay: `${Math.random() * 5}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+          {name}
         </h1>
+        <h2 className="text-xl md:text-2xl text-slate-400 mb-8">
+          {title}
+        </h2>
         
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.3, duration: 1 }}
-          className="max-w-2xl mx-auto space-y-4"
-        >
-          <p className="text-slate-400 text-sm md:text-lg font-light tracking-wide leading-relaxed uppercase">
-            Video Editor & 3D Artist building websites and apps, <br />
-            exploring the boundaries of game development.
+        <div className="max-w-3xl text-slate-300 space-y-4 text-lg">
+          <p>
+            Music producer and video editor from Algeria. Creating atmospheric sounds 
+            and cinematic visuals that blend emotion with technology.
           </p>
-        </motion.div>
-      </motion.div>
+          <p>
+            My work explores the intersection of sound design, visual storytelling, 
+            and creative coding. Each project is crafted to take the listener on 
+            a journey through sound and vision.
+          </p>
+          <p className="text-blue-400">
+            Currently working on new music and visual projects. Stay tuned.
+          </p>
+        </div>
 
-      <div className="absolute top-10 left-10 w-24 h-px bg-white/10 hidden md:block" />
-      <div className="absolute top-10 left-10 w-px h-24 bg-white/10 hidden md:block" />
-      <div className="absolute bottom-10 right-10 w-24 h-px bg-white/10 hidden md:block" />
-      <div className="absolute bottom-10 right-10 w-px h-24 bg-white/10 hidden md:block" />
+        <div className="mt-10">
+          <a 
+            href="#music" 
+            className="inline-block px-8 py-3 bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 rounded-full border border-blue-500/30 transition-all duration-300 hover:scale-105"
+          >
+            Explore My Music
+          </a>
+        </div>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
-      >
-        <span className="text-[9px] uppercase tracking-[0.5em] text-slate-500 font-bold">Scroll to Enter</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-12 bg-gradient-to-b from-blue-500 to-transparent"
-        />
-      </motion.div>
-    </div>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <div className="w-6 h-10 border-2 border-slate-700 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-slate-500 rounded-full mt-2 animate-bounce"></div>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes float {
+          0% { transform: translateY(0) translateX(0); opacity: 0; }
+          50% { transform: translateY(-20px) translateX(10px); opacity: 0.7; }
+          100% { transform: translateY(-40px) translateX(20px); opacity: 0; }
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 0.2; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(1.1); }
+        }
+        @keyframes ping {
+          75%, 100% { transform: scale(2); opacity: 0; }
+        }
+        .animate-pulse { animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .animate-ping { animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite; }
+        .animate-bounce { animation: bounce 1s infinite; }
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(6px); }
+        }
+      `}</style>
+    </section>
   );
 };
 
