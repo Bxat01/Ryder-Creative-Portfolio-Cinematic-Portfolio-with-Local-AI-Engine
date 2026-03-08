@@ -182,10 +182,9 @@ export const SOCIALS: SocialLink[] = [
   { platform: 'YouTube', url: 'https://youtube.com/@Ryder-XA', icon: 'Youtube' },
   { platform: 'Instagram', url: 'https://instagram.com/xavort', icon: 'Instagram' },
   { platform: 'GitHub', url: 'https://github.com/Bxat01', icon: 'Github' },
-  { platform: 'Email', url: 'abdkadrxt100@gmail.com', icon: 'Mail' }
+  { platform: 'Email', url: 'abdkadrxa@gmail.com', icon: 'Mail' }
 ];
 
-// ================== معلومات شخصية ==================
 export const PERSONAL_INFO = {
   name: 'RYDER XA',
   title: 'Artist, Producer & Creative Technologist',
@@ -197,7 +196,7 @@ export const PERSONAL_INFO = {
 export const ALBUMS: Album[] = [
   {
     id: 'fumes-dreams',
-    title: 'Shattered & Reborn',
+    title: 'Say My Name, Cupcake',
     coverImage: 'https://res.cloudinary.com/ddqedxovk/image/upload/v1772943388/mq4sfkdgjmndymodma4a.png',
     spotifyUrl: 'https://open.spotify.com/album/1LnSucJyIn4rwDUol31WXu?si=hCD-krBbRcaGglUaRAdTNw',
     isPublished: true,
@@ -236,7 +235,7 @@ export const ALBUMS: Album[] = [
   },
   {
     id: 'shattered-reborn',
-    title: 'Shattered & Reborn',
+    title: 'Static in My Head',
     coverImage: 'https://res.cloudinary.com/ddqedxovk/image/upload/v1772942397/adzn9xavedo6587t2el6.jpg',
     spotifyUrl: 'https://open.spotify.com/album/your_album_id_3',
     isPublished: null,
@@ -245,6 +244,22 @@ export const ALBUMS: Album[] = [
         id: 'Static-in-My-Head',
         title: 'Static in My Head',
         duration: '2:19',
+        spotifyUrl: 'https://open.spotify.com/',
+        isPublished: null
+      }
+    ]
+  },
+    {
+    id: 'shattered-reborn',
+    title: 'Fantasy Romance Under a Violet Sky',
+    coverImage: 'https://res.cloudinary.com/ddqedxovk/image/upload/v1773006691/lsd4wm3zdbigk8hu6vdk.jpg',
+    spotifyUrl: 'https://open.spotify.com/album/your_album_id_3',
+    isPublished: null,
+    tracks: [
+      {
+        id: 'Fantasy-Romance-Under-a-Viole-Sky',
+        title: 'Fantasy Romance Under a Violet Sky',
+        duration: '2:46',
         spotifyUrl: 'https://open.spotify.com/',
         isPublished: null
       }

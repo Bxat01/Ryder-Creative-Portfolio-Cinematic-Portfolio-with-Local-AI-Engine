@@ -104,7 +104,6 @@ const AboutContact: React.FC<AboutContactProps> = ({ config }) => {
             </div>
           </div>
           
-          {/* Tech Stack مع اللوجوات */}
           <div>
             <h2 className="text-3xl md:text-4xl font-light text-white mb-6">Tech Stack</h2>
             <div className="space-y-8">
@@ -134,10 +133,14 @@ const AboutContact: React.FC<AboutContactProps> = ({ config }) => {
           </div>
         </div>
         
-        {/* Social Links - مع أيقونات ملونة */}
         <div className="pt-16 border-t border-white/5">
           <h3 className="text-xl font-light text-white mb-8 text-center">Connect with me</h3>
           <div className="flex flex-wrap justify-center gap-8">
+            <div className="mt-10 text-center text-slate-500 text-sm space-y-1">
+             <p>Artist: Ryder </p>
+             <p>Business Email: abdkadrxa@gmail.com</p>
+             <p>Independent Artist & Producer</p>
+              </div>
             {SOCIALS.map((social) => (
               <a
                 key={social.platform}
